@@ -10,6 +10,7 @@ function App() {
   const [divFontColor, setDivFontColor] = useState("#000000");
 
   function changeBodyColor(newColor) {
+    setBodyColor(newColor);
     document.body.style.background = newColor;
   }
 
@@ -26,8 +27,7 @@ function App() {
         <input
           type='color'
           value={bodyColor}
-          onChange={(e) => {setBodyColor(e.target.value);
-                            changeBodyColor(bodyColor);
+          onChange={(e) => {changeBodyColor(e.target.value);
           }}
         />
       </div>
